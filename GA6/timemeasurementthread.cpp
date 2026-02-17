@@ -11,6 +11,7 @@
 #include "./algoritmi_sa_vezbi/ga03_konveksniomotac.h"
 #include "./algoritmi_sa_vezbi/ga04_konveksniomotac3d.h"
 #include "./algoritmi_sa_vezbi/ga05_preseciduzi.h"
+#include "./algoritmi_studentski_projekti/max_num_of_visible_points.h"
 
 //#include "ga06_presekPravougaonika.h"
 
@@ -56,6 +57,9 @@ void TimeMeasurementThread::run()
             break;
         case TipAlgoritma::TRIANGULACIJA:
             pAlgorithm = new Triangulation(nullptr, 0, false, "", i);
+            break;
+        case TipAlgoritma::MAX_NUM_OF_VP:
+            pAlgorithm = new MaxNumOfVisiblePoints(nullptr, 0, false, "", i);
             break;
        /* case TipAlgoritma::PRESEK_PRAVOUGAONIKA:
             pAlgorithm = new PresekPravougaonika(nullptr, 0, false, "", i);

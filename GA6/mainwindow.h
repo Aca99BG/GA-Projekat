@@ -20,7 +20,6 @@
 #include "./algoritmi_sa_vezbi/ga07_triangulation.h"
 #include "./algoritmi_studentski_projekti/max_num_of_visible_points.h"
 //#include "ga06_presekPravougaonika.h"
-using namespace QtCharts;
 /* Enumeracija algoritama */
 enum class TipAlgoritma {
     ALGORITMI_SA_VEZBI,
