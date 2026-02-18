@@ -81,14 +81,14 @@ std::vector<double> MaxNumOfVisiblePoints::visiblePoints(const std::vector<QPoin
     }
 
     std::sort(possible_angles.begin(), possible_angles.end());
-    int n = possible_angles.size();
+    int n = static_cast<int>(possible_angles.size());
 
     int l = 0, ret = 0;
     for (int i = 0; i < n; i++)
         possible_angles.push_back(possible_angles[i] + 360);
 
-    for (int r = 0; r < possible_angles.size(); r++) {
-        while ((possible_angles[r] - possible_angles[l]) > angle) {
+    for (int r = 0; r < n; r++) {
+        while ((possible_angles[r] - possible_angles[l]) > angle + 1e-9) { 
             l++;
         }
         int current_count = r - l + 1;
